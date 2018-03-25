@@ -1,0 +1,8 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (PNP.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Source.cpp
+c:\users\piotr\documents\visual studio 2015\projects\pnp\pnp\source.cpp(35): warning C4551: function call missing argument list
+c:\users\piotr\documents\visual studio 2015\projects\pnp\pnp\source.cpp(86): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\pnp\pnp\source.cpp(87): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\pnp\pnp\source.cpp(96): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  PNP.vcxproj -> C:\Users\Piotr\Documents\Visual Studio 2015\Projects\PNP\Debug\SFML.exe
+  PNP.vcxproj -> C:\Users\Piotr\Documents\Visual Studio 2015\Projects\PNP\Debug\SFML.pdb (Partial PDB)

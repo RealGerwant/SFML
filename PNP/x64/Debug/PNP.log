@@ -1,0 +1,12 @@
+﻿  Source.cpp
+c:\users\piotr\documents\visual studio 2015\projects\sfml\pnp\windowparts.h(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\sfml\pnp\windowparts.h(16): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\sfml\pnp\windowparts.h(17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\sfml\pnp\windowparts.h(25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\sfml\pnp\windowparts.h(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\sfml\pnp\windowparts.h(47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\sfml\pnp\windowparts.h(53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\sfml\pnp\windowparts.h(55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\piotr\documents\visual studio 2015\projects\sfml\pnp\source.cpp(65): warning C4551: function call missing argument list
+  PNP.vcxproj -> C:\Users\Piotr\Documents\Visual Studio 2015\Projects\SFML\x64\Debug\SFML.exe
+  PNP.vcxproj -> C:\Users\Piotr\Documents\Visual Studio 2015\Projects\SFML\x64\Debug\SFML.pdb (Partial PDB)
