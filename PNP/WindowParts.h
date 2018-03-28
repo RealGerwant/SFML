@@ -27,7 +27,18 @@ void makeBoard(int ScreenHeight, sf::RenderWindow &renderWindow, man (&pola)[8][
 
 			if ((j / boxsize % 2 == 1 && i / boxsize % 2 == 0) || (j / boxsize % 2 == 0 && i / boxsize % 2 == 1))
 			{
+				pola[(j / boxsize) - 1][(i / boxsize) - 1].isitaplace = 1;
 				box.setFillColor((*Themes)[themeID].black_box_color);
+				pola[(j / boxsize) - 1][(i / boxsize) - 1].borders.left_border = j;
+				pola[(j / boxsize) - 1][(i / boxsize) - 1].borders.right_border = j + boxsize;
+				pola[(j / boxsize) - 1][(i / boxsize) - 1].borders.up_border = i + boxsize;
+				pola[(j / boxsize) - 1][(i / boxsize) - 1].borders.down_border = i ;
+				if (pola[(j / boxsize) - 1][(i / boxsize) - 1].from)
+				{
+					box.setFillColor(sf::Color(255,0,0));
+				//	box.setOutlineThickness(boxsize);
+				//	box.setOutlineColor(sf::Color(255, 0, 0));
+				}
 			}
 			else
 			{

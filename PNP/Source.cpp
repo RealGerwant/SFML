@@ -8,7 +8,25 @@
 
 #define ScreenHeight 720
 
+void choseMan (man (&pola)[8][8],sf::Vector2i mouse_position)
+{
+	for (int i = 0; i < 8; ++i)
+	{
+		for (int j = 0; j < 8; j++)
+		{
+			if ( pola[j][i].isthereAman)
+			{
+				std::cout << pola[j][i].borders.left_border << " " << pola[j][i].borders.down_border << " " << pola[j][i].borders.right_border << " " << pola[j][i].borders.up_border << std::endl;
+				if (mouse_position.y < pola[j][i].borders.up_border && mouse_position.y > pola[j][i].borders.down_border && mouse_position.x >pola[j][i].borders.left_border && mouse_position.x <pola[j][i].borders.right_border)
+				{
+					pola[j][i].from = 1;
+				}
+			}
+		}
+	}
 
+
+}
 void startFillBoard(man (&pola)[8][8])
 {
 	for (int i = 0; i < 8; ++i)
@@ -16,6 +34,7 @@ void startFillBoard(man (&pola)[8][8])
 		for (int j = 0; j < 8; j++)
 		{
 			pola[i][j].isthereAman = 0;
+			pola[i][j].isitaplace = 0;
 
 		}
 	}
@@ -58,7 +77,7 @@ int main(int argc, char ** argv)
 
 	sf::RenderWindow gameWindow(sf::VideoMode(ScreenWidth, ScreenHeight), "SFmL");
 	sf::Texture background;
-	background.loadFromFile(themes_array[themeID].link_to_background);
+	background.loadFromFile(themes_array[themeID].link_to_background,sf::IntRect(0,0,ScreenWidth,ScreenHeight));
 	sf::Sprite back;
 	back.setTexture(background);
 	sf::Event event;
@@ -81,23 +100,24 @@ int main(int argc, char ** argv)
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
 				std::cout << position.x << " " << position.y << std::endl;
+				choseMan(Pola, position);
+			/*	std::cout << position.x << " " << position.y << std::endl;
 				if (position.y > 100)
 				{
 					if (themeID< themes_counts-1)
 					{
 						++themeID;
-						background.loadFromFile(themes_array[themeID].link_to_background);
-						sf::Sprite back;
-						back.setTexture(background);
 					}
 					else
 					{
 						--themeID;
-						background.loadFromFile(themes_array[themeID].link_to_background);
+					}
+						background.loadFromFile(themes_array[themeID].link_to_background, sf::IntRect(0, 0, ScreenWidth, ScreenHeight));
 						sf::Sprite back;
 						back.setTexture(background);
-					}
-				}
+			*/		
+
+			}
 			}
 			gameWindow.clear();
 			gameWindow.draw(back);
@@ -105,4 +125,3 @@ int main(int argc, char ** argv)
 			gameWindow.display();
 		}
 	}
-}

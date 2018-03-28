@@ -14,11 +14,24 @@ struct theme
 	std::string link_to_background;
 };
 
-struct man
+
+struct borders
 {
+	int left_border;
+	int down_border;
+	int right_border;
+	int up_border;
+};
+
+struct man  //place
+{
+	bool isitaplace = 1;
 	bool isthereAman;
 	bool team; //white = 0
 	bool king; //no king = 0
+	borders borders;
+	bool from = 0;
+	bool to = 0;
 
 };
 
